@@ -1,0 +1,27 @@
+#kaalutud keskmise funktsioon
+def kaalutud_keskmine(hinne1, punktid1, hinne2, punktid2):
+
+    hinded = {
+        "A": 5,
+        "B": 4,
+        "C": 3,
+        "D": 2,
+        "F": 1
+    }
+
+    h1=hinded[hinne1]
+    h2=hinded[hinne2]
+
+    keskmine=(h1 * punktid1 + h2 * punktid2) / (punktid1 + punktid2)
+
+    return keskmine
+
+hinne1 = input("Sisesta esimese ainekursuse hinne (A-F): ")
+punktid1 = int(input("Sisesta esimese ainekursuse ainepunktid (EAP): "))
+
+hinne2 = input("Sisesta teise ainekursuse hinne (A-F): ")
+punktid2 = int(input("Sisesta teise ainekursuse ainepunktid (EAP): "))
+
+tulemus = kaalutud_keskmine(hinne1, punktid1, hinne2, punktid2)
+
+print("Kaalutud keskmine hinne on ", round(tulemus, 2))
