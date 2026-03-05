@@ -1,0 +1,37 @@
+#kaalutud keskmise klass
+class Ained:
+
+    def __init__(self):
+        self.ained = []
+
+    def hinne_numbriks(self, hinne):
+        hinded = {
+            "A": 5,
+            "B": 4,
+            "C": 3,
+            "D": 2,
+            "F": 1
+        }
+        return hinded[hinne]
+    
+    def aine_lisamine(self, hinne, punktid):
+        hinne_arv = self.hinne_numbriks(hinne)
+        self.ained.append((hinne_arv, punktid))
+    
+    def keskmine(self):
+        punktide_summa = 0
+        summa = 0
+        
+        for hinne, punktid in self.ained:
+            summa += hinne * punktid
+            punktide_summa += punktid
+            
+        return summa/punktide_summa
+
+a=Ained()
+
+a.aine_lisamine("A", 6)
+a.aine_lisamine("B", 5)
+a.aine_lisamine("F", 2)
+
+print(a.keskmine())
