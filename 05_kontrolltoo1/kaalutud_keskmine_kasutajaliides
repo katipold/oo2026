@@ -1,0 +1,16 @@
+#loo kasutajaliides
+hinne=input("Sisesta hinne (A-F): ")
+punktid=int(input("Sisesta ainepunktid (EAP): "))
+
+hinded = {
+    "A": 5,
+    "B": 4,
+    "C": 3,
+    "D": 2,
+    "F": 1
+}
+
+korgus = hinded[hinne]
+
+for i in range(korgus):
+    print("*"*punktid)
